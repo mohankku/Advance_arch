@@ -1,0 +1,104 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BPRED	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.cpp	/^BPRED::BPRED(uint32_t policy) {$/;"	f	class:BPRED
+BPRED	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^class BPRED{$/;"	c
+BPRED_ALWAYS_TAKEN	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^    BPRED_ALWAYS_TAKEN=1,$/;"	e	enum:BPRED_TYPE_ENUM
+BPRED_GSHARE	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^    BPRED_GSHARE=2, $/;"	e	enum:BPRED_TYPE_ENUM
+BPRED_PERFECT	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^    BPRED_PERFECT=0,$/;"	e	enum:BPRED_TYPE_ENUM
+BPRED_POLICY	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^uint32_t  BPRED_POLICY=0; \/\/ 0:Perf 1:AlwaysTaken 2:Gshare$/;"	v
+BPRED_TYPE	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^} BPRED_TYPE;$/;"	t	typeref:enum:BPRED_TYPE_ENUM
+BPRED_TYPE_ENUM	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^typedef enum BPRED_TYPE_ENUM {$/;"	g
+ENABLE_EXE_FWD	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^uint32_t  ENABLE_EXE_FWD=0;$/;"	v
+ENABLE_MEM_FWD	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^uint32_t  ENABLE_MEM_FWD=0;$/;"	v
+EX_LATCH	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^    EX_LATCH,$/;"	e	enum:Latch_Type_ENUM
+FE_LATCH	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^    FE_LATCH,$/;"	e	enum:Latch_Type_ENUM
+GetPrediction	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.cpp	/^bool BPRED::GetPrediction(uint32_t PC){$/;"	f	class:BPRED
+HEARTBEAT_CYCLES	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	14;"	d	file:
+ID_LATCH	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^    ID_LATCH,$/;"	e	enum:Latch_Type_ENUM
+Latch_Type	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^} Latch_Type; $/;"	t	typeref:enum:Latch_Type_ENUM
+Latch_Type_ENUM	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^typedef enum Latch_Type_ENUM {$/;"	g
+MAX_PIPE_WIDTH	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	11;"	d
+MEM_LATCH	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^    MEM_LATCH,$/;"	e	enum:Latch_Type_ENUM
+NOTTAKEN	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.cpp	4;"	d	file:
+NUM_BPRED_TYPE	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^    NUM_BPRED_TYPE=3$/;"	e	enum:BPRED_TYPE_ENUM
+NUM_LATCH_TYPES	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^    NUM_LATCH_TYPES$/;"	e	enum:Latch_Type_ENUM
+NUM_OP_TYPE	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    NUM_OP_TYPE$/;"	e	enum:Op_Type_Enum
+OP_ALU	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    OP_ALU,             \/\/ ALU(ADD\/ SUB\/ MUL\/ DIV) operaiton$/;"	e	enum:Op_Type_Enum
+OP_CBR	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    OP_CBR,             \/\/ Conditional Branch$/;"	e	enum:Op_Type_Enum
+OP_LD	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    OP_LD,              \/\/ load operation$/;"	e	enum:Op_Type_Enum
+OP_OTHER	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    OP_OTHER,           \/\/ Other Ops$/;"	e	enum:Op_Type_Enum
+OP_ST	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    OP_ST,              \/\/ store operation$/;"	e	enum:Op_Type_Enum
+Op_Type	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^} Op_Type;$/;"	t	typeref:enum:Op_Type_Enum
+Op_Type_Enum	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^typedef enum Op_Type_Enum{$/;"	g
+PIPE_WIDTH	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^uint32_t  PIPE_WIDTH=1;$/;"	v
+Pipeline	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^typedef struct Pipeline {$/;"	s
+Pipeline	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^}Pipeline;$/;"	t	typeref:struct:Pipeline
+Pipeline_Latch	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^}Pipeline_Latch;$/;"	t	typeref:struct:Pipeline_Latch_Struct
+Pipeline_Latch_Struct	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^typedef struct Pipeline_Latch_Struct {$/;"	s
+SatDecrement	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^static inline uint32_t SatDecrement(uint32_t x)$/;"	f
+SatIncrement	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^static inline uint32_t SatIncrement(uint32_t x, uint32_t max)$/;"	f
+TAKEN	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.cpp	3;"	d	file:
+Trace_Rec	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^} Trace_Rec;$/;"	t	typeref:struct:Trace_Rec_Struct
+Trace_Rec_Struct	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^typedef struct Trace_Rec_Struct {$/;"	s
+UpdatePredictor	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.cpp	/^void  BPRED::UpdatePredictor(uint32_t PC, bool resolveDir, bool predDir) {$/;"	f	class:BPRED
+_BPRED_H_	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	2;"	d
+_PIPELINE_H	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	2;"	d
+_TRACE_H	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	2;"	d
+b_pred	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  BPRED *b_pred;$/;"	m	struct:Pipeline
+br_dir	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  br_dir;     \/\/ Branch Direction Taken \/ Not Taken$/;"	m	struct:Trace_Rec_Struct
+br_target	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint64_t br_target;  \/\/ Target Address of Branch$/;"	m	struct:Trace_Rec_Struct
+cc_read	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  cc_read;    \/\/ Conditional Code Read$/;"	m	struct:Trace_Rec_Struct
+cc_write	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  cc_write;   \/\/ Conditional Code Write$/;"	m	struct:Trace_Rec_Struct
+check_data_dependency_exe	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^bool check_data_dependency_exe(Pipeline *p, int entry) {$/;"	f
+check_data_dependency_local	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^bool check_data_dependency_local(Pipeline *p, int entry) {$/;"	f
+check_data_dependency_mem	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^bool check_data_dependency_mem(Pipeline *p, int entry) {$/;"	f
+check_heartbeat	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^void check_heartbeat(void){$/;"	f
+dest	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  dest;       \/\/ Destination$/;"	m	struct:Trace_Rec_Struct
+dest_needed	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  dest_needed; \/\/ $/;"	m	struct:Trace_Rec_Struct
+die_message	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^void die_message(const char *msg) {$/;"	f
+die_usage	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^void die_usage() {$/;"	f
+fetch_cbr_stall	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  bool fetch_cbr_stall;           \/\/ fetch stalled due to brach misprediction$/;"	m	struct:Pipeline
+halt	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  bool halt;                      \/\/ Pipeline Done Flag$/;"	m	struct:Pipeline
+halt_op_id	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  uint64_t halt_op_id;            \/\/ OpID of last inst in Trace$/;"	m	struct:Pipeline
+inst_addr	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint64_t inst_addr;  \/\/ instruction address $/;"	m	struct:Trace_Rec_Struct
+is_mispred_cbr	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  bool is_mispred_cbr; $/;"	m	struct:Pipeline_Latch_Struct
+last_hbeat_cycle	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^uint64_t last_hbeat_cycle;$/;"	v
+last_hbeat_inst	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^uint64_t last_hbeat_inst;$/;"	v
+last_hbeat_line	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^uint64_t last_hbeat_line;$/;"	v
+main	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^int main(int argc, char *argv[])$/;"	f
+mem_addr	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint64_t mem_addr;   \/\/ Load \/ Store Memory Address$/;"	m	struct:Trace_Rec_Struct
+mem_read	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  mem_read;   \/\/ Read$/;"	m	struct:Trace_Rec_Struct
+mem_write	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  mem_write;  \/\/ Write $/;"	m	struct:Trace_Rec_Struct
+op_id	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  uint64_t op_id;$/;"	m	struct:Pipeline_Latch_Struct
+op_id_tracker	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  uint64_t op_id_tracker;         \/\/ a sequence number for OPs to track$/;"	m	struct:Pipeline
+op_type	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  op_type;    \/\/ optype$/;"	m	struct:Trace_Rec_Struct
+pipe_check_bpred	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^void pipe_check_bpred(Pipeline *p, Pipeline_Latch *fetch_op){$/;"	f
+pipe_cycle	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^void pipe_cycle(Pipeline *p)$/;"	f
+pipe_cycle_EX	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^void pipe_cycle_EX(Pipeline *p){$/;"	f
+pipe_cycle_FE	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^void pipe_cycle_FE(Pipeline *p){$/;"	f
+pipe_cycle_ID	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^void pipe_cycle_ID(Pipeline *p){$/;"	f
+pipe_cycle_MEM	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^void pipe_cycle_MEM(Pipeline *p){$/;"	f
+pipe_cycle_WB	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^void pipe_cycle_WB(Pipeline *p){$/;"	f
+pipe_get_fetch_op	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^void pipe_get_fetch_op(Pipeline *p, Pipeline_Latch* fetch_op){$/;"	f
+pipe_init	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^Pipeline * pipe_init(FILE *tr_file_in){$/;"	f
+pipe_latch	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  Pipeline_Latch  pipe_latch[NUM_LATCH_TYPES][MAX_PIPE_WIDTH];\/\/ Pipeline Latches$/;"	m	struct:Pipeline
+pipe_print_state	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.cpp	/^void pipe_print_state(Pipeline *p){$/;"	f
+pipeline	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^Pipeline *pipeline;$/;"	v
+policy	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^  BPRED_TYPE policy;$/;"	m	class:BPRED
+print_stats	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/sim.cpp	/^void print_stats(void) {$/;"	f
+src1_needed	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  src1_needed; \/\/ Source Register 1 needed by this instruction$/;"	m	struct:Trace_Rec_Struct
+src1_reg	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  src1_reg;       \/\/ Source Register 1$/;"	m	struct:Trace_Rec_Struct
+src2_needed	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  src2_needed; \/\/ Source Register 2 needed to this instruction$/;"	m	struct:Trace_Rec_Struct
+src2_reg	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/trace.h	/^    uint8_t  src2_reg;       \/\/ Source Register 2$/;"	m	struct:Trace_Rec_Struct
+stall	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  bool stall;$/;"	m	struct:Pipeline_Latch_Struct
+stat_num_branches	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^  uint64_t stat_num_branches;$/;"	m	class:BPRED
+stat_num_cycle	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  uint64_t stat_num_cycle;            \/\/ Total Cycles$/;"	m	struct:Pipeline
+stat_num_mispred	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/bpred.h	/^  uint64_t stat_num_mispred;$/;"	m	class:BPRED
+stat_retired_inst	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  uint64_t stat_retired_inst;         \/\/ Total Commited Instructions$/;"	m	struct:Pipeline
+tr_entry	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  Trace_Rec tr_entry;$/;"	m	struct:Pipeline_Latch_Struct
+tr_file	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  FILE *tr_file;$/;"	m	struct:Pipeline
+valid	/home/mkumar68/Documents/advanced_architecture/Lab_2/src/pipeline.h	/^  bool valid;$/;"	m	struct:Pipeline_Latch_Struct
