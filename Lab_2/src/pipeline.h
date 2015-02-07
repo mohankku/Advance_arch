@@ -44,6 +44,7 @@ typedef struct Pipeline {
   bool halt;                      // Pipeline Done Flag
 
   bool fetch_cbr_stall;           // fetch stalled due to brach misprediction
+  uint64_t op_id;
   
   /* Statistics: students need to update these counters*/
   uint64_t stat_retired_inst;         // Total Commited Instructions

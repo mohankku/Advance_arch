@@ -130,6 +130,12 @@ void pipe_cycle_WB(Pipeline *p){
   for(ii=0; ii<PIPE_WIDTH; ii++){
     if(p->pipe_latch[MEM_LATCH][ii].valid){
       p->stat_retired_inst++;
+	  if (p->pipe_latch[MEM_LATCH][ii].tr_entry.op_type == OP_CBR) {
+ 	    //p->b_pred->UpdatePredictor(p->pipe_latch[MEM_LATCH][ii].tr_entry.inst_addr, p->pipe_latch[MEM_LATCH][ii].tr_entry.br_dir, false); 
+		if (p->pipe_latch[MEM_LATCH][ii].op_id == p->op_id) {
+	      p->fetch_cbr_stall = false;
+		}
+	  }
       if(p->pipe_latch[MEM_LATCH][ii].op_id >= p->halt_op_id){
 	    p->halt=true;
       }
@@ -185,18 +191,6 @@ bool check_data_dependency_exe(Pipeline *p, int entry) {
 					return false;
 				}
 			}
-			/*if (exec_tr_entry->op_type == OP_LD) {
-				if (fe_tr_entry->src1_needed) {
-					if (fe_tr_entry->src1_reg == exec_tr_entry->mem_read) {
-						return false;
-					}
-				}
-				if (fe_tr_entry->src2_needed) {
-					if (fe_tr_entry->src2_reg == exec_tr_entry->mem_read) {
-						return false;
-					}
-				}
-			}*/
 		}
 	}
 	return true;
@@ -225,10 +219,10 @@ bool check_fwd_data_dependency_exe(Pipeline *p, int entry) {
 						}
 					}
 				}
-			    if (fe_tr_entry->cc_read) {
-					if (exec_tr_entry->cc_write) {
-						return false;
-					}
+			    if ((fe_tr_entry->op_type == OP_CBR) && (fe_tr_entry->cc_read)) {
+				    if (exec_tr_entry->cc_write) {
+					    return false;
+				    }
 				}
 			}
 		}
@@ -262,18 +256,6 @@ bool check_data_dependency_mem(Pipeline *p, int entry) {
 					return false;
 				}
 			}
-			/*if (mem_tr_entry->op_type == OP_LD) {
-				if (fe_tr_entry->src1_needed) {
-					if (fe_tr_entry->src1_reg == mem_tr_entry->mem_read) {
-						return false;
-					}
-				}
-				if (fe_tr_entry->src2_needed) {
-					if (fe_tr_entry->src2_reg == mem_tr_entry->mem_read) {
-						return false;
-					}
-				}
-			}*/
 		}
 	}
 	return true;
@@ -340,7 +322,7 @@ bool check_fwd_data_dependency_local(Pipeline *p, int entry) {
 					}
 				}
 			}
-			if (prev_tr_entry->cc_read) {
+			if ((prev_tr_entry->op_type == OP_CBR) && (prev_tr_entry->cc_read)) {
 				if (fe_tr_entry->cc_write) {
 					return false;
 				}
@@ -414,6 +396,7 @@ void pipe_cycle_ID(Pipeline *p){
 }
 
 //--------------------------------------------------------------------//
+
 void pipe_cycle_FE(Pipeline *p){
   int ii, entries;
   Pipeline_Latch fetch_op;
@@ -425,6 +408,11 @@ void pipe_cycle_FE(Pipeline *p){
 		continue;
 	}
 
+	if (p->fetch_cbr_stall) {
+		p->pipe_latch[FE_LATCH][ii].valid = false;
+		continue;
+	}
+	
     pipe_get_fetch_op(p, &fetch_op);
 
     if(BPRED_POLICY){
@@ -437,15 +425,24 @@ void pipe_cycle_FE(Pipeline *p){
   
 }
 
-
 //--------------------------------------------------------------------//
 
 void pipe_check_bpred(Pipeline *p, Pipeline_Latch *fetch_op){
   // call branch predictor here, if mispred then mark in fetch_op
   // update the predictor instantly
   // stall fetch using the flag p->fetch_cbr_stall
+  if (fetch_op->valid) {
+	if (fetch_op->tr_entry.op_type == OP_CBR) {
+	  p->b_pred->stat_num_branches++;
+ 	  if (p->b_pred->GetPrediction(fetch_op->tr_entry.inst_addr) != fetch_op->tr_entry.br_dir) { 
+ 	    p->b_pred->UpdatePredictor(fetch_op->tr_entry.inst_addr, fetch_op->tr_entry.br_dir, false);
+        p->b_pred->stat_num_mispred++;
+        p->fetch_cbr_stall = true;
+		p->op_id = fetch_op->op_id;
+ 	  } else {
+ 	    p->b_pred->UpdatePredictor(fetch_op->tr_entry.inst_addr, fetch_op->tr_entry.br_dir, true);
+	  }
+	}
+  }
 }
-
-
 //--------------------------------------------------------------------//
-

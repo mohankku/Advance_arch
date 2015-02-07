@@ -29,14 +29,14 @@ typedef enum BPRED_TYPE_ENUM {
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 
+typedef struct branch_pred {
+	uint8_t pred:2;
+}branch_pred;
 
 class BPRED{
-  typedef struct branch_pred {
-		uint8_t pred:2;
-  }branch_pred;
   uint32_t     policy;
-  uint64_t     ghr;
-  branch_pred  bp[LIST_LENGTH];
+  uint16_t     ghr:PRED_BITS;
+  uint8_t      bp:2[LIST_LENGTH];
 
 public:
   uint64_t stat_num_branches;
